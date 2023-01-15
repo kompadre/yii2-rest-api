@@ -88,7 +88,7 @@ class QuestionsController extends Controller
 		if (!is_array($data)) {
 			throw new GoneHttpException('Data received from data source is invalid');
 		}
-	    \Yii::$app->cache->set($params, $data);
+	    \Yii::$app->cache->set($params, $data, 3600);
 	    return $data;
     }
 	
